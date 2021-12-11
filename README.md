@@ -25,5 +25,5 @@ Essa aplicação fornecerá para os usuários uma breve lista de tarefas que o m
 | ----------------- | -------------- |
 | Fernando José     | fjose90        |
 | Antônio Fernandes | antoniofern    |
-| Daphne Moretti    |                |
+| Dafne Moretti     |                |
 | Tiago José        | tiago-jv0      |
