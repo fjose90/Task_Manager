@@ -1,67 +1,29 @@
-# todolist_testes_bsi
-> Repositório Utilizado para projeto da disciplina de Testes de Software.
-Lista de Tarefas
+# Projeto da disciplina de Testes de Software
 
-[![NPM Version][npm-image]][npm-url]
-[![Build Status][travis-image]][travis-url]
-[![Downloads Stats][npm-downloads]][npm-url]
+Como projeto será criada uma aplicação de **Todo-List**, tal aplicação será simples pois o foco da mesm será a implementação dos testes e das funcionalidades, não será aplicação utilizada comercialmente e, por isso, decidimos fazer algo simples
 
-De um a dois parágrafos sobre o que é seu projeto e o que ele faz.
+<br />
 
 
+## Projeto : Todo List
 
-## Instalação
-
-OS X & Linux:
-
-```sh
-npm install my-crazy-module --save
-```
-
-Windows:
-
-```sh
-edit autoexec.bat
-```
-
-## Exemplo de uso
-
-Alguns exemplos interessantes e úteis sobre como seu projeto pode ser utilizado. Adicione blocos de códigos e, se necessário, screenshots.
+Essa aplicação fornecerá para os usuários uma breve lista de tarefas que o mesmo deve realizar ao decorrer de um certo intervalo de tempo, tal como diarimanete,semanalmente, mensalmente e etc.
+<br />
 
 
-## Configuração para Desenvolvimento
+## Linguagem : Typescript
+<br />
 
-Descreva como instalar todas as dependências para desenvolvimento e como rodar um test-suite automatizado de algum tipo. Se necessário, faça isso para múltiplas plataformas.
 
-```sh
-make install
-npm test
-```
+## Framework de teste: Jest
 
-## Histórico de lançamentos
+<br />
 
-* 0.0.1
-    * MUDANÇA: Atualização de docs (código do módulo permanece inalterado)
+## Equipe do projeto:
 
-## Meta
-
-Seu Nome – [@SeuNome](https://twitter.com/...) – SeuEmail@exemplo.com
-
-Distribuído sob a licença XYZ. Veja `LICENSE` para mais informações.
-
-[https://github.com/yourname/github-link](https://github.com/othonalberto/)
-
-## Contributing
-
-1. Faça o _fork_ do projeto (<https://github.com/yourname/yourproject/fork>)
-2. Crie uma _branch_ para sua modificação (`git checkout -b feature/fooBar`)
-3. Faça o _commit_ (`git commit -am 'Add some fooBar'`)
-4. _Push_ (`git push origin feature/fooBar`)
-5. Crie um novo _Pull Request_
-
-[npm-image]: https://img.shields.io/npm/v/datadog-metrics.svg?style=flat-square
-[npm-url]: https://npmjs.org/package/datadog-metrics
-[npm-downloads]: https://img.shields.io/npm/dm/datadog-metrics.svg?style=flat-square
-[travis-image]: https://img.shields.io/travis/dbader/node-datadog-metrics/master.svg?style=flat-square
-[travis-url]: https://travis-ci.org/dbader/node-datadog-metrics
-[wiki]: https://github.com/seunome/seuprojeto/wiki
+| Nome              | User do github |
+| ----------------- | -------------- |
+| Fernando José     | fjose90        |
+| Antônio Fernandes | antoniofern    |
+| Daphne Moretti    |                |
+| Tiago José        | tiago-jv0      |
