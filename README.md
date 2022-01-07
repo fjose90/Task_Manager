@@ -1,13 +1,13 @@
 # Projeto da disciplina de Testes de Software
 
-Como projeto será criada uma aplicação de **Todo-List**, tal aplicação será simples pois o foco da mesm será a implementação dos testes e das funcionalidades, não será aplicação utilizada comercialmente e, por isso, decidimos fazer algo simples
+Como projeto será criada uma aplicação de **to-do_TS**, tal aplicação será simples pois o foco da mesma será a implementação dos testes e das funcionalidades, não será aplicação utilizada comercialmente.
 
 <br />
 
 
-## Projeto : Todo List
+## Projeto : to-do_TS
 
-Essa aplicação fornecerá para os usuários uma breve lista de tarefas que o mesmo deve realizar ao decorrer de um certo intervalo de tempo, tal como diarimanete,semanalmente, mensalmente e etc.
+Essa aplicação fornecerá para os usuários uma breve lista de tarefas que o mesmo deve realizar ao decorrer de um certo intervalo de tempo, tal como diariamente,semanalmente, mensalmente e etc.
 <br />
 
 
@@ -25,5 +25,5 @@ Essa aplicação fornecerá para os usuários uma breve lista de tarefas que o m
 | ----------------- | -------------- |
 | Fernando José     | fjose90        |
 | Antônio Fernandes | antoniofern    |
-| Dafne Moretti     |                |
+| Dafne Moretti     | dafneM         |
 | Tiago José        | tiago-jv0      |
