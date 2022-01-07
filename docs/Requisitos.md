@@ -22,4 +22,8 @@ Como projeto será criada uma aplicação de **Todo-List**, tal aplicação ser�
 | RF14 - Alterar categoria          | Requisito de alterar as informações de categorias.             | Usuário |
 | RF15 - Visualizar categoria       | Requisito de visualizar as informações de categorias.          | Usuário |
 | RF16 - Exclui categoria           | Requisito de exclui uma categoria.                             | Usuário |
+| RF17 - Criar comentário           | Requisito de criar comentário para tarefa.                     | Usuário |
+| RF18 - Alterar categoria          | Requisito de alterar comentário para tarefa.                   | Usuário |
+| RF19 - Visualizar categoria       | Requisito de visualizar comentário para tarefa.                | Usuário |
+| RF20 - Exclui categoria           | Requisito de exclui comentário para tarefa.                    | Usuário |
 
