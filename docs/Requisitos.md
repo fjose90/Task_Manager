@@ -1,19 +1,24 @@
 # Descrição
 
-Como projeto será criada uma aplicação de **Todo-List**, tal aplicação será simples pois o foco da mesm será a implementação dos testes e das funcionalidades, não será aplicação utilizada comercialmente e, por isso, decidimos fazer algo simples
+Como projeto será criada uma aplicação de **Todo-List**, tal aplicação será simples pois o foco da mesma será a implementação dos testes e das funcionalidades, não será aplicação utilizada comercialmente.
 
 # Requisitos funcionais
-- O usuário deve ser capaz de criar uma conta no sistema
-- O usuário deve ser capaz de atualizar suas informações de cadastro
-- O usuário deve ser capaz de excluir sua conta
-- O usuário deve ser capaz de visualizar as informações que ele cadastrou
-- O usuário deve ser capaz de criar uma tarefa a qual irá realizar futuramente
-- O usuário deve ser capaz de alterar os detalhes da tarefa criada por ele
-- O usuário deve ser capaz de excluir tarefas
-- O usuário deve ser capaz de visualizar todas as tarefas já cadastradas
-- O usuário deve ser capaz de marcar uma tarefa como favorita
-- O usuário deve ser capaz de filtrar as tarefas por um campo especifico
-- O usuário deve ser capaz de criar categorias para definir nas tarefas
-- O usuário deve ser capaz de alterar as informações de categorias
-- O usuário deve ser capaz de deletar uma categoria
-- O usuário deve ser capaz de visualizar as categorias já criadas pelo mesmo
+
+| Requisito                         | Descrição                                                      | Ator    |
+| --------------------------------- | -------------------------------------------------------------- | ------- |
+| RF01 - Cadastrar usuários         | Requisito para a criação de usuários.                          | Usuário |
+| RF02 - Atualizar dados do usuário | Requisito para atualizar dados sobre o Usuário.                | Usuário |
+| RF03 - Excluir o usuário;         | Requisito de exclusão de um Usuário.                           | Usuário |
+| RF04 - Ver dados do usuário       | Requisito para exibir os dados do Usuário.                     | Usuário |
+| RF05 - Realizar login             | Requisito para realizar login no sistema.                      | Usuário |
+| RF06 - Recuperar senha do usuário | Requisito para recuperar senha de um Usuário                   | Usuário |
+| RF07 - Cadastrar tarefas          | Requisito para a criação de tarefas no sistema.                | Usuário |
+| RF08 - Exibir tarefas             | Requisito para exibir os dados dos tarefas.                    | Usuário |
+| RF09 - Atualizar tarefas          | Requisito para atualizar dados sobre os tarefas.               | Usuário |
+| RF10 - Excluir tarefas            | Requisito de exclusão de um Plano.                             | Usuário |
+| RF11 - Marcar tarefa              | Requisito de marcar tarefa como favorita.                      | Usuário |
+| RF12 - Filtrar tarefas            | Requisito de filtrar as tarefas por um campo especifico.       | Usuário |
+| RF13 - Criar categoria            | Requisito de criar categorias para definir nas tarefas.        | Usuário |
+| RF14 - Alterar categoria          | Requisito de capaz de alterar as informações de categorias.    | Usuário |
+| RF14 - Visualizar categoria       | Requisito de capaz de visualizar as informações de categorias. | Usuário |
+
