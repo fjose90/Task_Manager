@@ -19,6 +19,7 @@ Como projeto será criada uma aplicação de **Todo-List**, tal aplicação ser�
 | RF11 - Marcar tarefa              | Requisito de marcar tarefa como favorita.                      | Usuário |
 | RF12 - Filtrar tarefas            | Requisito de filtrar as tarefas por um campo especifico.       | Usuário |
 | RF13 - Criar categoria            | Requisito de criar categorias para definir nas tarefas.        | Usuário |
-| RF14 - Alterar categoria          | Requisito de capaz de alterar as informações de categorias.    | Usuário |
-| RF15 - Visualizar categoria       | Requisito de capaz de visualizar as informações de categorias. | Usuário |
+| RF14 - Alterar categoria          | Requisito de alterar as informações de categorias.             | Usuário |
+| RF15 - Visualizar categoria       | Requisito de visualizar as informações de categorias.          | Usuário |
+| RF16 - Exclui categoria           | Requisito de exclui uma categoria.                             | Usuário |
 
