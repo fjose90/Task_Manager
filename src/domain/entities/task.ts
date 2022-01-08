@@ -1,6 +1,6 @@
 export type Task = {
   title: string
   description: string
-  isCompleted: boolean
+  isComplete: boolean
   isFavorite: boolean
 }

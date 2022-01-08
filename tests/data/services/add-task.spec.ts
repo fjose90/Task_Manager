@@ -6,7 +6,7 @@ import { mock, MockProxy } from 'jest-mock-extended'
 const mockTask: Task = {
   title: 'any_title',
   description: 'any_description',
-  isCompleted: false,
+  isComplete: false,
   isFavorite: false
 }
 
