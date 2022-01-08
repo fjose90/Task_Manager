@@ -63,7 +63,7 @@ O sistema to-do_TS foi criado para ajudar a um usuário para agendar suas tarefa
 | RF07 - Cadastrar tarefas          | Requisito para a criação de tarefas no sistema.                | Usuário |
 | RF08 - Exibir tarefas             | Requisito para exibir os dados dos tarefas.                    | Usuário |
 | RF09 - Atualizar tarefas          | Requisito para atualizar dados sobre os tarefas.               | Usuário |
-| RF10 - Excluir tarefas            | Requisito de exclusão de um Plano.                             | Usuário |
+| RF10 - Excluir tarefas            | Requisito de exclusão de uma tarefa.                             | Usuário |
 | RF11 - Marcar tarefa              | Requisito de marcar tarefa como favorita.                      | Usuário |
 | RF12 - Filtrar tarefas            | Requisito de filtrar as tarefas por um campo especifico.       | Usuário |
 | RF13 - Criar categoria            | Requisito de criar categorias para definir nas tarefas.        | Usuário |
