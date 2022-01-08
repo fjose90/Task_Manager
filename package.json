@@ -1,33 +1,43 @@
 {
-  "name": "todolist_testes_bsi",
-  "version": "1.0.0",
-  "main": "index.js",
-  "repository": "https://github.com/fjose90/todolist_testes_bsi.git",
-  "author": "Tiago Jose <tiago_jvo@outlook.com>",
-  "license": "MIT",
-  "scripts": {
-    "start:dev": "nodemon",
-    "lint": "eslint src/** test** --fixs",
-    "test": "jest"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.16.0",
-    "@babel/preset-env": "^7.16.4",
-    "@babel/preset-typescript": "^7.16.0",
-    "@types/jest": "^27.0.3",
-    "@types/node": "^16.11.12",
-    "@typescript-eslint/eslint-plugin": "^5.6.0",
-    "@typescript-eslint/parser": "^5.6.0",
-    "babel-jest": "^27.4.4",
-    "eslint": "^8.4.1",
-    "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-plugin-import": "^2.25.3",
-    "jest": "^27.4.4",
-    "nodemon": "^2.0.15",
-    "ts-jest": "^27.1.1",
-    "ts-node": "^10.4.0"
-  },
-  "dependencies": {
-    "typescript": "^4.5.3"
-  }
+    "name": "todo_list",
+    "version": "1.0.0",
+    "main": "index.js",
+    "author": "Tiago Jose <tiago_jvo@outlook.com>",
+    "license": "MIT",
+    "scripts": {
+        "start": "node ./build/main",
+        "build": "rimraf build && tsc -p tsconfig-build.json",
+        "lint": "eslint .",
+        "lint:fix": "yarn lint -- --fix",
+        "test": "jest --passWithNoTests --no-cache --runInBand",
+        "test:watch": "yarn test -- --watch",
+        "test:coverage": "yarn test -- --coverage",
+        "test:staged": "yarn test -- --findRelatedTests",
+        "prepare": "husky install"
+    },
+    "devDependencies": {
+        "@jest-mock/express": "^1.4.5",
+        "@types/jest": "^27.0.3",
+        "@types/module-alias": "^2.0.1",
+        "@types/node": "^16.11.13",
+        "@typescript-eslint/eslint-plugin": "^4.0.1",
+        "eslint": "^7.12.1",
+        "eslint-config-standard-with-typescript": "^21.0.1",
+        "eslint-plugin-import": "^2.22.1",
+        "eslint-plugin-node": "^11.1.0",
+        "eslint-plugin-promise": "^5.0.0",
+        "husky": "^7.0.4",
+        "jest": "^27.4.5",
+        "jest-mock-extended": "^2.0.4",
+        "lint-staged": "^12.1.2",
+        "ts-jest": "^27.1.1",
+        "typescript": "*"
+    },
+    "engines": {
+        "node": "16.x"
+    },
+    "dependencies": {
+        "module-alias": "^2.2.2",
+        "rimraf": "^3.0.2"
+    }
 }
