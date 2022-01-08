@@ -37,4 +37,16 @@ describe('AddTaskService', () => {
 
     expect(taskRepositorySpy.save).toHaveBeenCalledWith(mockTask)
   })
+
+  it('should call Throws if AddTaskRepository throws', async () => {
+    const taskRepositorySpy = mock<AddTaskRepository>()
+    taskRepositorySpy.save.mockRejectedValueOnce(() => {
+      throw new Error('any_error')
+    })
+    const sut = new AddTaskService(taskRepositorySpy)
+
+    const promise = sut.handle(mockTask)
+
+    await expect(promise).rejects.toThrow(new Error('any_error'))
+  })
 })
