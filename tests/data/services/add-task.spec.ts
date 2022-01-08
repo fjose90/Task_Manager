@@ -16,6 +16,9 @@ describe('AddTaskService', () => {
 
   beforeAll(() => {
     taskRepositorySpy = mock<AddTaskRepository>()
+    taskRepositorySpy.save.mockResolvedValue({
+      id: '1'
+    })
   })
 
   beforeEach(() => {
@@ -26,6 +29,13 @@ describe('AddTaskService', () => {
     await sut.handle(mockTask)
 
     expect(taskRepositorySpy.save).toHaveBeenCalledWith(mockTask)
+  })
+
+  it('should return task id if AddTaskRepository succeeds', async () => {
+    const result = await sut.handle(mockTask)
+    expect(result).toEqual({
+      id: '1'
+    })
   })
 
   it('should call Throws if AddTaskRepository throws', async () => {

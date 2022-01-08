@@ -1,11 +1,13 @@
 import { Task } from '@/domain/entities'
 
-interface AddTask {
+export interface AddTask {
   handle: (params: AddTask.Params) => Promise<AddTask.Result>
 }
 
 export namespace AddTask {
   export type Params = Task
 
-  export type Result = boolean
+  export type Result = {
+    id: string
+  }
 }
