@@ -31,12 +31,11 @@ class AddTaskController {
       }
     }
 
-    await this.addTaskService.handle({ title: httpRequest.title!, description: httpRequest.description!, isComplete: httpRequest.isComplete!, isFavorite: httpRequest.isFavorite! })
-
+    const { id } = await this.addTaskService.handle({ title: httpRequest.title!, description: httpRequest.description!, isComplete: httpRequest.isComplete!, isFavorite: httpRequest.isFavorite! })
     return {
-      status: 401,
+      status: 200,
       data: {
-        error: 'Field title is required'
+        id
       }
     }
   }
@@ -67,9 +66,24 @@ describe('AddTaskController', () => {
   it('should call AddTask with correct params', async () => {
     const addTaskSpy = mock<AddTask>()
     const sut = new AddTaskController(addTaskSpy)
+    addTaskSpy.handle.mockResolvedValueOnce({
+      id: 'any_id'
+    })
 
     await sut.handle({ title: 'any_title', description: 'any_description', isComplete: false, isFavorite: false })
 
     expect(addTaskSpy.handle).toHaveBeenCalledWith({ title: 'any_title', description: 'any_description', isComplete: false, isFavorite: false })
+  })
+
+  it('should return status code 200 with task id if AddTask completes successfully', async () => {
+    const addTaskSpy = mock<AddTask>()
+    addTaskSpy.handle.mockResolvedValueOnce({
+      id: 'any_id'
+    })
+    const sut = new AddTaskController(addTaskSpy)
+
+    const result = await sut.handle({ title: 'any_title', description: 'any_description', isComplete: false, isFavorite: false })
+
+    expect(result).toEqual({ status: 200, data: { id: 'any_id' } })
   })
 })
