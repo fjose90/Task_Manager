@@ -31,11 +31,20 @@ class AddTaskController {
       }
     }
 
-    const { id } = await this.addTaskService.handle({ title: httpRequest.title!, description: httpRequest.description!, isComplete: httpRequest.isComplete!, isFavorite: httpRequest.isFavorite! })
-    return {
-      status: 200,
-      data: {
-        id
+    try {
+      const { id } = await this.addTaskService.handle({ title: httpRequest.title!, description: httpRequest.description!, isComplete: httpRequest.isComplete!, isFavorite: httpRequest.isFavorite! })
+      return {
+        status: 200,
+        data: {
+          id
+        }
+      }
+    } catch (error) {
+      return {
+        status: 500,
+        data: {
+          message: (error as Error).message
+        }
       }
     }
   }
@@ -85,5 +94,15 @@ describe('AddTaskController', () => {
     const result = await sut.handle({ title: 'any_title', description: 'any_description', isComplete: false, isFavorite: false })
 
     expect(result).toEqual({ status: 200, data: { id: 'any_id' } })
+  })
+
+  it('should return status code 500 with internal error if AddTask throws', async () => {
+    const addTaskSpy = mock<AddTask>()
+    addTaskSpy.handle.mockRejectedValueOnce(new Error('any_error'))
+    const sut = new AddTaskController(addTaskSpy)
+
+    const result = await sut.handle({ title: 'any_title', description: 'any_description', isComplete: false, isFavorite: false })
+
+    expect(result).toEqual({ status: 500, data: { message: 'any_error' } })
   })
 })
