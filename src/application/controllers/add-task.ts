@@ -13,21 +13,29 @@ export class AddTaskController {
   constructor (private readonly addTaskService: AddTask) {}
 
   async handle (httpRequest: Partial<HttpRequest>): Promise<HttpResponse> {
-    const requiredFields = ['title', 'description']
+    try {
+      const error = this.validate(httpRequest)
 
-    for (const requiredField of requiredFields) {
-      if (!httpRequest[requiredField]) {
+      if (error !== undefined) {
         return badRequest({
-          error: `Field ${requiredField} is required`
+          error
         })
       }
-    }
 
-    try {
       const { id } = await this.addTaskService.handle({ title: httpRequest.title!, description: httpRequest.description!, isComplete: httpRequest.isComplete!, isFavorite: httpRequest.isFavorite! })
       return ok({ id })
     } catch (error) {
       return serverError()
+    }
+  }
+
+  private validate (httpRequest: Partial<HttpRequest>): string | undefined {
+    const requiredFields = ['title', 'description']
+
+    for (const requiredField of requiredFields) {
+      if (!httpRequest[requiredField]) {
+        return `Field ${requiredField} is required`
+      }
     }
   }
 }
