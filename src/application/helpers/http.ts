@@ -1,22 +1,18 @@
+import { ServerError } from '../errors'
 
-export type HttpResponse = {
-  status: number
-  data: any
-}
+export type HttpResponse<DataType> = {statusCode: number, data: DataType}
 
-export const ok = (data: any): HttpResponse => ({
-  status: 200,
+export const ok = <DataType = any> (data: DataType): HttpResponse<DataType> => ({
+  statusCode: 200,
   data
 })
 
-export const badRequest = (data: any): HttpResponse => ({
-  status: 401,
-  data
+export const badRequest = (error: Error): HttpResponse<Error> => ({
+  statusCode: 400,
+  data: error
 })
 
-export const serverError = (): HttpResponse => ({
-  status: 500,
-  data: {
-    message: 'Internal Server Error'
-  }
+export const serverError = (error: Error): HttpResponse<Error> => ({
+  statusCode: 500,
+  data: new ServerError(error)
 })

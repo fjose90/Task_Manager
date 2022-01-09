@@ -1,5 +1,5 @@
 import { AddTaskController } from '@/application/controllers'
-import { RequiredFieldError } from '@/application/errors'
+import { RequiredFieldError, ServerError } from '@/application/errors'
 import { AddTask } from '@/domain/features/add-task'
 import { mock, MockProxy } from 'jest-mock-extended'
 
@@ -15,21 +15,21 @@ describe('AddTaskController', () => {
     sut = new AddTaskController(addTaskSpy)
   })
 
-  it('should return 401 if task title is not defined in request', async () => {
+  it('should return 400 if task title is not defined in request', async () => {
     const result = await sut.handle({ description: 'any_description', isComplete: false, isFavorite: false })
 
     expect(result).toEqual({
-      status: 401,
-      data: { error: new RequiredFieldError('title') }
+      statusCode: 400,
+      data: new RequiredFieldError('title')
     })
   })
 
-  it('should return 401 if task description is not defined in request', async () => {
+  it('should return 400 if task description is not defined in request', async () => {
     const result = await sut.handle({ title: 'any_title', isComplete: false, isFavorite: false })
 
     expect(result).toEqual({
-      status: 401,
-      data: { error: new RequiredFieldError('description') }
+      statusCode: 400,
+      data: new RequiredFieldError('description')
     })
   })
 
@@ -50,14 +50,14 @@ describe('AddTaskController', () => {
 
     const result = await sut.handle({ title: 'any_title', description: 'any_description', isComplete: false, isFavorite: false })
 
-    expect(result).toEqual({ status: 200, data: { id: 'any_id' } })
+    expect(result).toEqual({ statusCode: 200, data: { id: 'any_id' } })
   })
 
   it('should return status code 500 with internal error if AddTask throws', async () => {
-    addTaskSpy.handle.mockRejectedValueOnce(new Error(''))
+    addTaskSpy.handle.mockRejectedValueOnce(new Error('server_error'))
 
     const result = await sut.handle({ title: 'any_title', description: 'any_description', isComplete: false, isFavorite: false })
 
-    expect(result).toEqual({ status: 500, data: { message: 'Internal Server Error' } })
+    expect(result).toEqual({ statusCode: 500, data: new ServerError(new Error('server_error')) })
   })
 })

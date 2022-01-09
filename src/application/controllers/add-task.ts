@@ -9,17 +9,19 @@ type HttpRequest = {
   isFavorite?: boolean
 }
 
+type HttpResponseResult = {
+  id: string
+}
+
 export class AddTaskController {
   constructor (private readonly addTaskService: AddTask) {}
 
-  async handle (httpRequest: HttpRequest): Promise<HttpResponse> {
+  async handle (httpRequest: HttpRequest): Promise<HttpResponse<Error | HttpResponseResult>> {
     try {
       const error = this.validate(httpRequest)
 
       if (error !== undefined) {
-        return badRequest({
-          error
-        })
+        return badRequest(error)
       }
 
       const { title, description, isComplete = false, isFavorite = false } = httpRequest
@@ -27,7 +29,7 @@ export class AddTaskController {
       const { id } = await this.addTaskService.handle({ title: title!, description: description!, isComplete, isFavorite })
       return ok({ id })
     } catch (error) {
-      return serverError()
+      return serverError(error as Error)
     }
   }
 
