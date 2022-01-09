@@ -1,4 +1,7 @@
 import { addAlias } from 'module-alias'
 import { resolve } from 'path'
+import { config } from './env'
 
-addAlias('@', resolve('build'))
+const resolveTo = config.isProductionEnviroment ? 'build' : 'src'
+
+addAlias('@', resolve(resolveTo))

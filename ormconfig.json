@@ -1,0 +1,11 @@
+{
+    "type": "postgres",
+    "host": "kesavan.db.elephantsql.com",
+    "port": 5432,
+    "username": "vagdirfs",
+    "database": "vagdirfs",
+    "password": "VgvL_tZ3jaPwbpkCAT6Zz87MA_zcObas",
+    "entities": [
+        "src/infra/database/postgres/entities/index.js"
+    ]
+}
