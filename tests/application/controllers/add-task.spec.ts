@@ -1,12 +1,21 @@
 import { AddTaskController } from '@/application/controllers'
 import { RequiredFieldError } from '@/application/errors'
 import { AddTask } from '@/domain/features/add-task'
-import { mock } from 'jest-mock-extended'
+import { mock, MockProxy } from 'jest-mock-extended'
 
 describe('AddTaskController', () => {
+  let addTaskSpy: MockProxy<AddTask>
+  let sut: AddTaskController
+
+  beforeAll(() => {
+    addTaskSpy = mock<AddTask>()
+  })
+
+  beforeEach(() => {
+    sut = new AddTaskController(addTaskSpy)
+  })
+
   it('should return 401 if task title is not defined in request', async () => {
-    const addTaskSpy = mock<AddTask>()
-    const sut = new AddTaskController(addTaskSpy)
     const result = await sut.handle({ description: 'any_description', isComplete: false, isFavorite: false })
 
     expect(result).toEqual({
@@ -16,8 +25,6 @@ describe('AddTaskController', () => {
   })
 
   it('should return 401 if task description is not defined in request', async () => {
-    const addTaskSpy = mock<AddTask>()
-    const sut = new AddTaskController(addTaskSpy)
     const result = await sut.handle({ title: 'any_title', isComplete: false, isFavorite: false })
 
     expect(result).toEqual({
@@ -27,8 +34,6 @@ describe('AddTaskController', () => {
   })
 
   it('should call AddTask with correct params', async () => {
-    const addTaskSpy = mock<AddTask>()
-    const sut = new AddTaskController(addTaskSpy)
     addTaskSpy.handle.mockResolvedValueOnce({
       id: 'any_id'
     })
@@ -39,11 +44,9 @@ describe('AddTaskController', () => {
   })
 
   it('should return status code 200 with task id if AddTask completes successfully', async () => {
-    const addTaskSpy = mock<AddTask>()
     addTaskSpy.handle.mockResolvedValueOnce({
       id: 'any_id'
     })
-    const sut = new AddTaskController(addTaskSpy)
 
     const result = await sut.handle({ title: 'any_title', description: 'any_description', isComplete: false, isFavorite: false })
 
@@ -51,9 +54,7 @@ describe('AddTaskController', () => {
   })
 
   it('should return status code 500 with internal error if AddTask throws', async () => {
-    const addTaskSpy = mock<AddTask>()
     addTaskSpy.handle.mockRejectedValueOnce(new Error(''))
-    const sut = new AddTaskController(addTaskSpy)
 
     const result = await sut.handle({ title: 'any_title', description: 'any_description', isComplete: false, isFavorite: false })
 
