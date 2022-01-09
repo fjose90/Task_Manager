@@ -1,4 +1,4 @@
 import { addAlias } from 'module-alias'
 import { resolve } from 'path'
 
-addAlias('@', resolve('build'))
+addAlias('@', resolve('src'))
