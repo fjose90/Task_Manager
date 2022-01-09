@@ -1,19 +1,5 @@
 import { RequiredFieldError } from '@/application/errors'
-import { RequiredFieldValidator, Validator } from '@/application/validators'
-
-class ValidatorsComposite implements Validator {
-  constructor (private readonly validators: Validator[]) {}
-
-  validate (): Error | undefined {
-    for (const validator of this.validators) {
-      const error = validator.validate()
-
-      if (error !== undefined) {
-        return error
-      }
-    }
-  }
-}
+import { RequiredFieldValidator, ValidatorsComposite } from '@/application/validators'
 
 describe('ValidatorsComposite', () => {
   it('should return the first error it encounters', () => {
