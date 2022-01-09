@@ -1,7 +1,7 @@
 
 import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm'
 
-@Entity({ name: 'Task' })
+@Entity({ name: 'tasks' })
 export class PgTask {
   @PrimaryGeneratedColumn()
   id!: number
