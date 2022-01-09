@@ -51,11 +51,11 @@ describe('AddTaskController', () => {
 
   it('should return status code 500 with internal error if AddTask throws', async () => {
     const addTaskSpy = mock<AddTask>()
-    addTaskSpy.handle.mockRejectedValueOnce(new Error('any_error'))
+    addTaskSpy.handle.mockRejectedValueOnce(new Error(''))
     const sut = new AddTaskController(addTaskSpy)
 
     const result = await sut.handle({ title: 'any_title', description: 'any_description', isComplete: false, isFavorite: false })
 
-    expect(result).toEqual({ status: 500, data: { message: 'any_error' } })
+    expect(result).toEqual({ status: 500, data: { message: 'Internal Server Error' } })
   })
 })
