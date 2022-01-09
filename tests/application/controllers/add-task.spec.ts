@@ -1,4 +1,5 @@
 import { AddTaskController } from '@/application/controllers'
+import { RequiredFieldError } from '@/application/errors'
 import { AddTask } from '@/domain/features/add-task'
 import { mock } from 'jest-mock-extended'
 
@@ -10,7 +11,7 @@ describe('AddTaskController', () => {
 
     expect(result).toEqual({
       status: 401,
-      data: { error: 'Field title is required' }
+      data: { error: new RequiredFieldError('title') }
     })
   })
 
@@ -21,7 +22,7 @@ describe('AddTaskController', () => {
 
     expect(result).toEqual({
       status: 401,
-      data: { error: 'Field description is required' }
+      data: { error: new RequiredFieldError('description') }
     })
   })
 

@@ -1,18 +1,18 @@
 import { AddTask } from '@/domain/features/add-task'
 import { badRequest, HttpResponse, ok, serverError } from '../helpers'
+import { RequiredFieldValidator, ValidatorsComposite } from '../validators'
 
 type HttpRequest = {
-  title: string
-  description: string
-  isComplete: boolean
-  isFavorite: boolean
-  [key: string]: string | boolean
+  title?: string
+  description?: string
+  isComplete?: boolean
+  isFavorite?: boolean
 }
 
 export class AddTaskController {
   constructor (private readonly addTaskService: AddTask) {}
 
-  async handle (httpRequest: Partial<HttpRequest>): Promise<HttpResponse> {
+  async handle (httpRequest: HttpRequest): Promise<HttpResponse> {
     try {
       const error = this.validate(httpRequest)
 
@@ -22,20 +22,23 @@ export class AddTaskController {
         })
       }
 
-      const { id } = await this.addTaskService.handle({ title: httpRequest.title!, description: httpRequest.description!, isComplete: httpRequest.isComplete!, isFavorite: httpRequest.isFavorite! })
+      const { title, description, isComplete = false, isFavorite = false } = httpRequest
+
+      const { id } = await this.addTaskService.handle({ title: title!, description: description!, isComplete, isFavorite })
       return ok({ id })
     } catch (error) {
       return serverError()
     }
   }
 
-  private validate (httpRequest: Partial<HttpRequest>): string | undefined {
-    const requiredFields = ['title', 'description']
+  private validate (httpRequest: HttpRequest): Error | undefined {
+    const requiredFields = ['title', 'description'] as const
+    const validators = []
 
     for (const requiredField of requiredFields) {
-      if (!httpRequest[requiredField]) {
-        return `Field ${requiredField} is required`
-      }
+      validators.push(new RequiredFieldValidator(requiredField, httpRequest[requiredField]))
     }
+
+    return new ValidatorsComposite(validators).validate()
   }
 }
