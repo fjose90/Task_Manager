@@ -1,6 +1,6 @@
 import { AddTask } from '@/domain/features/add-task'
 import { badRequest, HttpResponse, ok, serverError } from '../helpers'
-import { RequiredFieldValidator, ValidatorsComposite } from '../validators'
+import { RequiredFieldValidator, ValidatorsBuilder, ValidatorsComposite } from '../validators'
 
 type HttpRequest = {
   title?: string
@@ -38,6 +38,7 @@ export class AddTaskController {
     const validators = []
 
     for (const requiredField of requiredFields) {
+      ValidatorsBuilder.of({ field: requiredField, value: httpRequest[requiredField] }).required().build()
       validators.push(new RequiredFieldValidator(requiredField, httpRequest[requiredField]))
     }
 

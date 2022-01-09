@@ -6,10 +6,10 @@ export class ValidatorsBuilder {
 
   private constructor (
     private readonly field: string,
-    private readonly value: string
+    private readonly value?: string
   ) {}
 
-  static of ({ field, value }: {field: string, value: string}): ValidatorsBuilder {
+  static of ({ field, value }: {field: string, value?: string}): ValidatorsBuilder {
     return new ValidatorsBuilder(field, value)
   }
 
