@@ -1,4 +1,4 @@
-import { UpdateTask } from '@/domain/features/update-tasks'
+import { UpdateTask } from '@/domain/features/update-task'
 import { HttpResponse, ok } from '../helpers'
 import { RequiredFieldValidator, Validator, ValidatorsBuilder } from '../validators'
 import { Controller } from './controller'

@@ -1,4 +1,4 @@
-import { UpdateTask } from '@/domain/features/update-tasks'
+import { UpdateTask } from '@/domain/features/update-task'
 import { UpdateTaskRepository } from '../contracts/update-task-repository'
 
 export class UpdateTaskService implements UpdateTask {
