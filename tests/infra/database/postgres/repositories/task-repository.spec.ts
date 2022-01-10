@@ -1,3 +1,4 @@
+// import { GetTasksRepository } from '@/data/contracts'
 import { Task } from '@/domain/entities'
 import { PgTask } from '@/infra/database/postgres/entities'
 import { PgTaskRepository } from '@/infra/database/postgres/repositories'
@@ -10,6 +11,20 @@ const mockTask: Task = {
   isComplete: false,
   isFavorite: false
 }
+
+// const mockedTasks: Task[] = [{
+//   title: 'Encher garrafa de água',
+//   description: 'Para tomar 2l de água por dia preciso me lembrar de encher a garrafa',
+//   isComplete: false,
+//   isFavorite: false
+// },
+// {
+//   title: 'Terminar tarefa da faculdade',
+//   description: 'Finalizar tarefa da matéria de testes de software',
+//   isComplete: false,
+//   isFavorite: true
+// },
+// ]
 
 describe('PgTaskRepository', () => {
   let sut: PgTaskRepository
@@ -31,4 +46,10 @@ describe('PgTaskRepository', () => {
 
     expect(result).toEqual({ id: '1' })
   })
+
+  // it('should get tasks', async () => {
+  //   const result = await sut.loadTasks()
+
+  //   expect(result).toEqual(mockedTasks)
+  // })
 })
