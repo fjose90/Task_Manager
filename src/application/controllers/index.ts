@@ -1,4 +1,5 @@
 export * from './add-task'
 export * from './get-tasks'
+export * from './update-task'
 export * from './controller'
 export * from './delete-task'
