@@ -143,10 +143,15 @@ Este documento descreve os User Stories criados a partir da Lista de Requisitos 
 | **Tempo Gasto (real):** |           |
 | **Tamanho Funcional**   | 7 PF      |
 
-| Testes de Aceitação (TA) |                                                                    |
-| ------------------------ | ------------------------------------------------------------------ |
-| **Código**               | **Descrição**                                                      |
-| **TA01.01**              | Deve ser possível cadas trar um comentário em uma tarefa existente |
-| **TA01.02**              | Deve ser possível excluir um comentário feito em uma tarefa        |
-| **TA01.03**              | Deve ser possível alterar um comentário em uma tarefa              |
-| **TA01.04**              | Deve ser possível obter todos os comentários de uma tarefa         |
+| Testes de Aceitação (TA) |                                                                                         |
+| ------------------------ | --------------------------------------------------------------------------------------- |
+| **Código**               | **Descrição**                                                                           |
+| **TA04.01**              | Deve ser possível cadas trar um comentário em uma tarefa existente                      |
+| **TA04.02**              | Caso não seja possível inserir, deve informar o erro ao usuário                         |
+| **TA01.03**              | Deve ser possível excluir um comentário feito em uma tarefa                             |
+| **TA01.04**              | Caso não seja possível excluir um comentário, deve informar o erro ao usuário           |
+| **TA01.05**              | Deve ser possível alterar um comentário em uma tarefa                                   |
+| **TA01.06**              | Caso não seja possível alterar um comentário, deve informar o erro ao usuário           |
+| **TA01.07**              | Deve ser possível obter todos os comentários de uma tarefa                              |
+| **TA01.07**              | Caso não seja possível obter comentários de uma tarefa, deve informar o erro ao usuário |
+
