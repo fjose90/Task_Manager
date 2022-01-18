@@ -31,9 +31,9 @@ Este documento descreve os User Stories criados a partir da Lista de Requisitos 
 | RF15 - Visualizar categoria       | Requisito de visualizar as informações de categorias.          | Usuário |
 | RF16 - Exclui categoria           | Requisito de exclui uma categoria.                             | Usuário |
 | RF17 - Criar comentário           | Requisito de criar comentário para tarefa.                     | Usuário |
-| RF18 - Alterar categoria          | Requisito de alterar comentário para tarefa.                   | Usuário |
-| RF19 - Visualizar categoria       | Requisito de visualizar comentário para tarefa.                | Usuário |
-| RF20 - Exclui categoria           | Requisito de exclui comentário para tarefa.                    | Usuário |
+| RF18 - Alterar comentário          | Requisito de alterar comentário para tarefa.                   | Usuário |
+| RF19 - Visualizar comentário       | Requisito de visualizar comentário para tarefa.                | Usuário |
+| RF20 - Excluir comentário           | Requisito de excluir comentário para tarefa.                    | Usuário |
 
 ### User Story US01 - Manter Usuário
 
@@ -64,19 +64,18 @@ Este documento descreve os User Stories criados a partir da Lista de Requisitos 
 | **TA01.03**              | Descrever o teste de aceitação 03 do US01 |
 | **TA01.04**              | Descrever o teste de aceitação 04 do US01 |
 
-### User Story US01 - Manter Tarefas
+### User Story US02 - Manter Tarefas
 
 |               |                                                                                                                                                  |
 | ------------- | :----------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Descrição** | O sistema deve manter um cadastro de tarefas que tem acesso ao sistema via login e senha. Uma tarefa tem os atributos titulo, descrição, status. |
+| **Descrição** | O sistema deve ser capaz de realizar o cadastro de tarefas cadastradas pelo usuário, onde irá armazenar o próprio código, título, descrição, favorito, completo, sendo "favorito" e "completo" atributos do tipo booleano. |
 
 | **Requisitos envolvidos** |                                |
 | ------------------------- | :----------------------------- |
-| RF01                      | Cadastrar tarefas              |
-| RF02                      | Alterar tarefas                |
-| RF03                      | Consultar tarefass             |
-| RF04                      | Excluir tarefas                |
-| RF05                      | Vizualizar detalhes do tarefas |
+| RF07                      | Cadastrar tarefas              |
+| RF08                      | Exibir detalhes de uma tarefas |
+| RF09                      | Alterar tarefas                |
+| RF10                      | Excluir tarefas                |
 
 |                         |           |
 | ----------------------- | :-------- |
@@ -88,10 +87,10 @@ Este documento descreve os User Stories criados a partir da Lista de Requisitos 
 | Testes de Aceitação (TA) |                                           |
 | ------------------------ | ----------------------------------------- |
 | **Código**               | **Descrição**                             |
-| **TA01.01**              | Descrever o teste de aceitação 01 do US01 |
-| **TA01.02**              | Descrever o teste de aceitação 02 do US01 |
-| **TA01.03**              | Descrever o teste de aceitação 03 do US01 |
-| **TA01.04**              | Descrever o teste de aceitação 04 do US01 |
+| **TA02.01**              | Cadastrar uma tarefa e checar se foi salvo / cadastrado corretamente |
+| **TA02.02**              | Excluir uma tarefa e checar se ela foi excluída corretamente |
+| **TA02.03**              | Alterar os atributos de uma tarefa e checar se os campos foram salvos corretamente |
+| **TA02.04**              | Checar se ao preencher apenas os campos obrigatórios de uma tarefa, ela é salva corretamente |
 
 ### User Story US01 - Manter Categorias
 
