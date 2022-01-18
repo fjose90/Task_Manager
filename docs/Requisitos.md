@@ -27,3 +27,8 @@ Como projeto será criada uma aplicação de **Todo-List**, tal aplicação ser�
 | RF19 - Visualizar comentário      | Requisito de visualizar comentário para tarefa.          | Usuário |
 | RF20 - Excluir comentário         | Requisito de exclui comentário para tarefa.              | Usuário |
 
+# Modelo Conceitual
+Modelo desenvolvido usando a ferramenta de modelagem astah.
+
+![Modelo Conceitual](images/modelo_conceitual.png)
+
