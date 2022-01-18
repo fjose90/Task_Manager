@@ -7,8 +7,20 @@ Este documento descreve os User Stories criados a partir da Lista de Requisitos 
 
 | Data       | Versão |             Descrição             | Autor |
 | :--------- | :----: | :-------------------------------: | :---- |
-| 07/01/2022 | 0.0.1  | Template e descrição do documento |
-| ...        |  ...   |                ...                | ...   |
+| 17/01/2022 | 0.0.1  | Criação do documento de User Stories | Fernando 
+| 17/01/2022     |  0.0.2   |               Adição dos detalhamentos e testes de aceitação de tarefas     | Antônio Fernandes Junior
+| 17/01/2022     |  0.0.3   |               Adição dos detalhamentos e testes de aceitação de comentários     | Tiago Jose Vieira
+| 17/01/2022     |  0.0.4   |               Adição dos detalhamentos e testes de aceitação de categorias     | Dafne Moretti 
+
+## Organização de implementação
+
+
+| US    | Descrição  | Responsável pela implementação |  
+| :--------- | :----: | :-------------------------------: |
+| US01 | Manter Usuário | Antônio Fernandes Junior  | 
+| US02    |  Manter Tarefas | Todos os membros da equipe se subdividiram para fazer a tarefa |
+| US03    | Manter Categorias | Dafne Moretti e Fernando José   |   
+| US04  | Manter Comentários | Tiago Jose Vieira  |    
 
 ## Requisitos
 
@@ -59,10 +71,11 @@ Este documento descreve os User Stories criados a partir da Lista de Requisitos 
 | Testes de Aceitação (TA) |                                           |
 | ------------------------ | ----------------------------------------- |
 | **Código**               | **Descrição**                             |
-| **TA01.01**              | Descrever o teste de aceitação 01 do US01 |
-| **TA01.02**              | Descrever o teste de aceitação 02 do US01 |
-| **TA01.03**              | Descrever o teste de aceitação 03 do US01 |
-| **TA01.04**              | Descrever o teste de aceitação 04 do US01 |
+| **TA01.01**              | Deve ser possível cadastrar um usuário |
+| **TA01.02**              | Deve ser possível alterar um usuário |
+| **TA01.03**              | Deve ser possível consultar usuários |
+| **TA01.04**              | Deve ser possível excluir usuários existentes |
+| **TA01.05**              | Deve ser possível visualizar detalhes do usuário |
 
 ### User Story US02 - Manter Tarefas
 
@@ -92,7 +105,7 @@ Este documento descreve os User Stories criados a partir da Lista de Requisitos 
 | **TA02.03**              | Alterar os atributos de uma tarefa e checar se os campos foram salvos corretamente           |
 | **TA02.04**              | Checar se ao preencher apenas os campos obrigatórios de uma tarefa, ela é salva corretamente |
 
-### User Story US01 - Manter Categorias
+### User Story US03 - Manter Categorias
 
 |               |                                                 |
 | ------------- | :---------------------------------------------- |
@@ -104,23 +117,26 @@ Este documento descreve os User Stories criados a partir da Lista de Requisitos 
 | RF02                      | Alterar categorias                |
 | RF03                      | Consultar categorias              |
 | RF04                      | Excluir categorias                |
-| RF05                      | Vizualizar detalhes do categorias |
+| RF05                      | Vizualizar detalhes das categorias |
 
 |                         |           |
 | ----------------------- | :-------- |
 | **Prioridade**          | Essencial |
-| **Estimativa**          | 8 h       |
+| **Estimativa**          | 6 h       |
 | **Tempo Gasto (real):** |           |
-| **Tamanho Funcional**   | 7 PF      |
+| **Tamanho Funcional**   | 5 PF      |
 
 | Testes de Aceitação (TA) |                                           |
 | ------------------------ | ----------------------------------------- |
 | **Código**               | **Descrição**                             |
-| **TA01.01**              | Descrever o teste de aceitação 01 do US01 |
-| **TA01.02**              | Descrever o teste de aceitação 02 do US01 |
-| **TA01.03**              | Descrever o teste de aceitação 03 do US01 |
-| **TA01.04**              | Descrever o teste de aceitação 04 do US01 |
-
+| **TA01.01**              | Deve ser possível cadastrar uma categoria para caracterizar novas tarefas e agrupá-las em um objetivo em comum |
+| **TA01.02**              | O usuário deve conseguir alterar as categorias existentes |
+| **TA01.03**              | Deve ser possível consultar as categorias já cadastradas no sistema |
+| **TA01.04**              | Caso o usuário deseje excluir categorias anteriormente cadastradas, o sistema deve possibilitar essa exclusão |
+| **TA01.04**              | Deve ser possível visualizar maiores detalhes de cada categoria a fim de compreender exatamente com qual objetivo a categoria foi cadastrada |
+| **TA01.05**              | Se não for possível cadastrar uma categoria, o usuário deve visualizar que não a ação não aconteceu por algum motivo |
+| **TA01.06**              | Caso a categoria não seja alterada, o usuário deve ser notificado que não foi possível e permanecer navegando no sistema |
+| **TA01.07**              | Uma vez que as categorias cadastradas não puderem ser consultadas, o sistema precisa notificá-lo |
 
 
 ### User Story US04 - Manter Comentários
