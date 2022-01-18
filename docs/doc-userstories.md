@@ -7,8 +7,8 @@ Este documento descreve os User Stories criados a partir da Lista de Requisitos 
 
 | Data       | Versão |             Descrição             | Autor |
 | :--------- | :----: | :-------------------------------: | :---- |
-| 07/01/2022 | 0.0.1  | Template e descrição do documento |
-| ...        |  ...   |                ...                | ...   |
+| 07/01/2022 | 0.0.1  | Template e descrição do documento |@fjose90|
+| 17/01/2022 | 0.0.2  | Modificação de alguns detalhes | @fjose90  |
 
 ## Requisitos
 
@@ -47,7 +47,7 @@ Este documento descreve os User Stories criados a partir da Lista de Requisitos 
 | RF02                      | Alterar Usuário                |
 | RF03                      | Consultar Usuários             |
 | RF04                      | Excluir Usuário                |
-| RF05                      | Vizualizar detalhes do Usuário |
+
 
 |                         |           |
 | ----------------------- | :-------- |
@@ -76,7 +76,7 @@ Este documento descreve os User Stories criados a partir da Lista de Requisitos 
 | RF02                      | Alterar tarefas                |
 | RF03                      | Consultar tarefass             |
 | RF04                      | Excluir tarefas                |
-| RF05                      | Vizualizar detalhes do tarefas |
+| RF05                      | Vizualizar detalhes das tarefas |
 
 |                         |           |
 | ----------------------- | :-------- |
