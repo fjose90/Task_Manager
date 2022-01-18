@@ -23,7 +23,7 @@ Essa aplicação fornecerá para os usuários uma breve lista de tarefas que o m
 
 | Nome              | User do github |
 | ----------------- | -------------- |
-| Fernando José     | fjose90        |
-| Antônio Fernandes | antoniofern    |
-| Dafne Moretti     | dafneM         |
-| Tiago José        | tiago-jv0      |
+| Fernando José     | [fjose90](https://github.com/fjose90)      |
+| Antônio Fernandes | [antoniofern](https://github.com/antoniofern)  |
+| Dafne Moretti     | [DafneM](https://github.com/DafneM)  |
+| Tiago José        | [tiago-jv0](https://github.com/tiago-jv0)   |
