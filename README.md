@@ -27,3 +27,9 @@ Essa aplicação fornecerá para os usuários uma breve lista de tarefas que o m
 | Antônio Fernandes | [antoniofern](https://github.com/antoniofern)  |
 | Dafne Moretti     | [DafneM](https://github.com/DafneM)  |
 | Tiago José        | [tiago-jv0](https://github.com/tiago-jv0)   |
+
+## Documentação 
+
+[Requisitos](docs/Requisitos.md)   
+[Histórias de Usuário](docs/doc-userstories.md) 
+[Documento de Visão](docs/doc-visao.md) 
