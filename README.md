@@ -12,10 +12,19 @@ Essa aplicação fornecerá para os usuários uma breve lista de tarefas que o m
 
 
 ## Linguagem : Typescript
+
+![image](https://user-images.githubusercontent.com/54643335/149858778-25cceef0-44d1-44c8-a79e-e2ff0f405a23.png)
+
+Para saber mais sobre a linguagem acesse [aqui](https://www.typescriptlang.org/)
+
 <br />
 
 
 ## Framework de teste: Jest
+
+![image](https://user-images.githubusercontent.com/54643335/149858734-c13ec7a2-b757-4ed3-9038-d724404a5bf7.png)
+
+Caso queira saber mais sobre o Jest, entre no [site](https://jestjs.io/pt-BR/)
 
 <br />
 
@@ -23,7 +32,15 @@ Essa aplicação fornecerá para os usuários uma breve lista de tarefas que o m
 
 | Nome              | User do github |
 | ----------------- | -------------- |
-| Fernando José     | fjose90        |
-| Antônio Fernandes | antoniofern    |
-| Dafne Moretti     | dafneM         |
-| Tiago José        | tiago-jv0      |
+| Fernando José     | [fjose90](https://github.com/fjose90)      |
+| Antônio Fernandes | [antoniofern](https://github.com/antoniofern)  |
+| Dafne Moretti     | [DafneM](https://github.com/DafneM)  |
+| Tiago José        | [tiago-jv0](https://github.com/tiago-jv0)   |
+
+## Documentação 
+
+[Requisitos](docs/Requisitos.md)   
+
+[Histórias de Usuário](docs/doc-userstories.md) 
+
+[Documento de Visão](docs/doc-visao.md) 

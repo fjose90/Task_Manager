@@ -69,11 +69,11 @@ O sistema to-do_TS foi criado para ajudar a um usuário para agendar suas tarefa
 | RF13 - Criar categoria            | Requisito de criar categorias para definir nas tarefas.        | Usuário |
 | RF14 - Alterar categoria          | Requisito de alterar as informações de categorias.             | Usuário |
 | RF15 - Visualizar categoria       | Requisito de visualizar as informações de categorias.          | Usuário |
-| RF16 - Exclui categoria           | Requisito de exclui uma categoria.                             | Usuário |
+| RF16 - Excluir categoria           | Requisito de exclui uma categoria.                             | Usuário |
 | RF17 - Criar comentário           | Requisito de criar comentário para tarefa.                     | Usuário |
-| RF18 - Alterar categoria          | Requisito de alterar comentário para tarefa.                   | Usuário |
-| RF19 - Visualizar categoria       | Requisito de visualizar comentário para tarefa.                | Usuário |
-| RF20 - Exclui categoria           | Requisito de exclui comentário para tarefa.                    | Usuário |
+| RF18 - Alterar comentário          | Requisito de alterar comentário para tarefa.                   | Usuário |
+| RF19 - Visualizar comentário       | Requisito de visualizar comentário para tarefa.                | Usuário |
+| RF20 - Excluir comentário           | Requisito de exclui comentário para tarefa.                    | Usuário |
 
 ### 2.2 Requisitos não-funcionais
 
