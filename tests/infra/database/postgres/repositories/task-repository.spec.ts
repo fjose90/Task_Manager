@@ -47,9 +47,9 @@ describe('PgTaskRepository', () => {
     expect(result).toEqual({ id: '1' })
   })
 
-  // it('should get tasks', async () => {
-  //   const result = await sut.loadTasks()
+  it('should update a existent task', async () => {
+    const result = await sut.update({ id: '1', title: 'any title', description: 'any description', isFavorite: false, isComplete: false })
 
-  //   expect(result).toEqual(mockedTasks)
-  // })
+    expect(result).toEqual({ id: '1', title: 'any title', description: 'any description', isFavorite: false, isComplete: false })
+  })
 })
