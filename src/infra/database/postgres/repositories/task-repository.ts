@@ -14,7 +14,7 @@ export class PgTaskRepository {
   async loadTasks (): Promise<GetTasksRepository.Result> {
     const pgTaskRepository = getRepository(PgTask)
 
-    const pgResult = await pgTaskRepository.find()
+    const pgResult = await pgTaskRepository.find({ relations: ['commentaries'] })
 
     return pgResult
   }
