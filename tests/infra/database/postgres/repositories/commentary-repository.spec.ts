@@ -42,16 +42,16 @@ describe('PgCommentaryRepository', () => {
   })
 
   it('should retrieve a comments by a task id', async () => {
-    const result = await sut.getByTaskId({ id: '1' })
+    const result = await sut.loadCommentaries()
 
     expect(result.length).toBe(1)
-    expect(result[0]).toEqual({ id: 1, description: 'Hello' })
+    expect(result[0]).toEqual({ task_id: '1', description: 'Hello' })
   })
 
   it('should delete a commentary on a task', async () => {
     await sut.deleteById({ id: '1' })
 
-    const result = await sut.getByTaskId({ id: '1' })
+    const result = await sut.loadCommentaries()
 
     expect(result.length).toBe(0)
   })

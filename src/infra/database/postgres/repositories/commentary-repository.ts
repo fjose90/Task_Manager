@@ -2,8 +2,9 @@ import { getRepository } from 'typeorm'
 import { DeleteCommentaryRepository, SaveCommentaryRepository } from '@/data/contracts'
 import { Commentary } from '@/domain/entities'
 import { PgCommentary, PgTask } from '@/infra/database/postgres/entities'
+import { GetCommentariesRepository } from '@/data/contracts/get-commentaries-repository'
 
-export class PgCommentaryRepository implements SaveCommentaryRepository, DeleteCommentaryRepository {
+export class PgCommentaryRepository implements SaveCommentaryRepository, DeleteCommentaryRepository, GetCommentariesRepository {
   async save (commentary: Commentary): Promise<SaveCommentaryRepository.Result> {
     const pgTaskRepository = getRepository(PgTask)
     const pgCommentaryRepository = getRepository(PgCommentary)
@@ -14,12 +15,12 @@ export class PgCommentaryRepository implements SaveCommentaryRepository, DeleteC
     return { id: id.toString() }
   }
 
-  async getByTaskId ({ id }: {id: string}): Promise<any[]> {
+  async loadCommentaries (): Promise<GetCommentariesRepository.Result> {
     const pgCommentaryRepository = getRepository(PgCommentary)
 
-    const result = await pgCommentaryRepository.find({ where: { task: id } })
+    const result = await pgCommentaryRepository.find({ relations: ['task'] })
 
-    return result
+    return result.map((commentary) => ({ description: commentary.description, task_id: commentary?.task?.id.toString() ?? null }))
   }
 
   async deleteById ({ id }: DeleteCommentaryRepository.Params): Promise<DeleteCommentaryRepository.Result> {
