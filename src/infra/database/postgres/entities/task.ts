@@ -19,6 +19,6 @@ export class PgTask {
   @Column({ type: 'boolean' })
   isComplete!: boolean
 
-  @OneToMany(() => PgCommentary, (commentary) => commentary.task)
+  @OneToMany(() => PgCommentary, (commentary) => commentary.task, { onDelete: 'SET NULL', onUpdate: 'CASCADE' })
   commentaries!: PgCommentary[]
 }

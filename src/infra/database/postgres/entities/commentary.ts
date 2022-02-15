@@ -2,7 +2,7 @@
 import { Column, Entity, JoinColumn, ManyToOne, PrimaryGeneratedColumn } from 'typeorm'
 import { PgTask } from './task'
 
-@Entity({ name: 'commentary' })
+@Entity({ name: 'commentaries' })
 export class PgCommentary {
   @PrimaryGeneratedColumn()
   id!: number
@@ -10,7 +10,7 @@ export class PgCommentary {
   @Column()
   description!: string
 
-  @ManyToOne(() => PgTask, (task) => task.commentaries)
+  @ManyToOne(() => PgTask, (task) => task.commentaries, { onDelete: 'SET NULL', onUpdate: 'CASCADE' })
   @JoinColumn()
   task!: PgTask
 }
