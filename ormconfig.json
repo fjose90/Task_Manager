@@ -5,6 +5,7 @@
     "username": "vagdirfs",
     "database": "vagdirfs",
     "password": "VgvL_tZ3jaPwbpkCAT6Zz87MA_zcObas",
+    "synchronize": false,
     "entities": [
         "src/infra/database/postgres/entities/index.ts"
     ]
